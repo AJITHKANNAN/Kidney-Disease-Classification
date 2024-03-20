@@ -12,3 +12,8 @@ prepare_base_model:
   base_model_path: artifacts/prepare_base_model/base_model.h5 # h5 format
   # H5 is one of the Hierarchical Data Formats (HDF) used to store large amount of data.
   updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5
+
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.h5
