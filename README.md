@@ -1,12 +1,12 @@
 # Kidney-Disease-Classification-MLflow-DVC
 
 
-## Workflows
+## Workflows or Steps to the followed in-Order
 
 1. Update config.yaml
 2. Update secrets.yaml [Optional]
 3. Update params.yaml
-4. Update the entity
+4. Update the entity (Entities are the return type of any functions we given in a Class)
 5. Update the configuration manager in src config
 6. Update the components
 7. Update the pipeline 
@@ -15,14 +15,14 @@
 10. app.py
 
 # How to run?
-### STEPS:
+### STEPS 1:
 
 Clone the repository
 
 ```bash
 https://github.com/AJITHKANNAN/Kidney-Disease-Classification/
 ```
-### STEP 01- Create a conda environment after opening the repository
+### STEP 02- Create a conda environment after opening the repository
 
 ```bash
 conda create -n envname python=3.8 -y
@@ -33,7 +33,7 @@ conda activate envname
 ```
 
 
-### STEP 02- install the requirements
+### STEP 03- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
