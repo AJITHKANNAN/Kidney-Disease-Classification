@@ -1,0 +1,8 @@
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] # as per VGG-16 model
+BATCH_SIZE: 16
+INCLUDE_TOP: False  # Ignoring the Dense layer from the Pretrained VGG-16 Model 
+EPOCHS: 2
+CLASSES: 2 # Op --> tumor or Not
+WEIGHTS: imagenet  # Pretrained image dataset
+LEARNING_RATE: 0.03
