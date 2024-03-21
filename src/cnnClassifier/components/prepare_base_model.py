@@ -5,13 +5,13 @@ import tensorflow as tf
 from pathlib import Path
 from cnnClassifier.entity.config_entity import PrepareBaseModelConfig
 
+
 class PrepareBaseModel:
     def __init__(self, config: PrepareBaseModelConfig):
         self.config = config
 
     
     def get_base_model(self):
-        # https://keras.io/api/applications/vgg/#vgg16-function
         self.model = tf.keras.applications.vgg16.VGG16(
             input_shape=self.config.params_image_size,
             weights=self.config.params_weights,
@@ -20,9 +20,7 @@ class PrepareBaseModel:
 
         self.save_model(path=self.config.base_model_path, model=self.model)
 
-# A static method is a method which is bound to the class and not the object of the class. 
-# This means that it can be called without creating an instance of the class.
-# It can't access or modify class state
+    
 
     @staticmethod
     def _prepare_full_model(model, classes, freeze_all, freeze_till, learning_rate):

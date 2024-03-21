@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-# Entity - return type of a defined classes
 @dataclass(frozen=True)
 class DataIngestionConfig:
     root_dir: Path
@@ -10,7 +9,9 @@ class DataIngestionConfig:
     local_data_file: Path
     unzip_dir: Path
 
-@dataclass(frozen=True) # It doesn't allow any other data than the mentioned below
+
+
+@dataclass(frozen=True)
 class PrepareBaseModelConfig:
     root_dir: Path
     base_model_path: Path
@@ -20,6 +21,8 @@ class PrepareBaseModelConfig:
     params_include_top: bool
     params_weights: str
     params_classes: int
+
+
 
 @dataclass(frozen=True)
 class TrainingConfig:
@@ -31,3 +34,14 @@ class TrainingConfig:
     params_batch_size: int
     params_is_augmentation: bool
     params_image_size: list
+
+
+
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_of_model: Path
+    training_data: Path
+    all_params: dict
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int

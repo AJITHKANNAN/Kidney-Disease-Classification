@@ -6,6 +6,8 @@ from cnnClassifier import logger
 
 STAGE_NAME = "Training"
 
+
+
 class ModelTrainingPipeline:
     def __init__(self):
         pass
@@ -30,3 +32,4 @@ if __name__ == '__main__':
     except Exception as e:
         logger.exception(e)
         raise e
+        
