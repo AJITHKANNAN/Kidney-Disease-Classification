@@ -17,7 +17,7 @@ class EvaluationPipeline:
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         evaluation.save_score()
-        evaluation.log_into_mlflow()
+        # evaluation.log_into_mlflow()  # It is used only on the develeopment stage for Experimentation and not in the Deployment stage
 
 
 if __name__ == '__main__':
