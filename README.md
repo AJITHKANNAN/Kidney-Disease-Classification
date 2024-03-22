@@ -89,7 +89,7 @@ SET  MLFLOW_TRACKING_PASSWORD= your_token
 
 1. dvc init
 2. dvc repro
-3. dvc dag
+3. dvc dag # show pipeline diagram
 
 
 ## About MLflow & DVC
